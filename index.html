@@ -21,26 +21,6 @@
       rel="icon"
       href="https://www.aqa.org.uk/__data/assets/file/0005/43682/favicon.ico?0.1.2"
       sizes="32x32" />
-    <link
-      rel="apple-touch-icon"
-      href="https://static.aqa.org.uk/assets/image/0003/53364/apple-touch-icon.png" />
-    <meta property="og:title" content="Find past papers and mark schemes" />
-    <meta property="og:url" content="https://www.rqaonline.netlify.app" />
-    <meta property="og:image" content="./images/LOGO1.png" />
-    <meta
-      property="og:description"
-      content="Find past papers and mark schemes for RQA exams, and specimen papers for new courses." />
-    <!-- Global //-->
-    <!-- General //-->
-    <meta name="Title" content="Find past papers and mark schemes" />
-    <meta
-      name="Description"
-      content="Find past papers and mark schemes for AQA exams, and specimen papers for new courses." />
-    <meta
-      name="Keywords"
-      content="past papers; exam papers; question papers; mark schemes; marking schemes; specimen papers" />
-    <!-- General for pages //-->
-    <!-- Widgets //-->
     <!-- Configuration //-->
     <meta name="WidgetID" content="qp" />
     <title>RQA | Find past papers and mark schemes</title>
@@ -1685,6 +1665,106 @@
                     );
 
                     if (selectedSubject === "8257") {
+                      // Mathematics
+                      var pastPapers = [
+                        // {
+                        //   name: "Paper 1 Non-calculator June 2024",
+                        //   size: "507 KB",
+                        //   href: "June2024/Exams/Exported/P1-NonCalc-F.pdf",
+                        // },
+                        // {
+                        //   name: "Insert (Foundation): formulae sheet June 2024",
+                        //   size: "163 KB",
+                        //   href: "June2024/Inserts/Exported/P1-NonCalc-F.pdf",
+                        // },
+                        // {
+                        //   name: "Mark scheme (Foundation): Paper 1 Non-calculator June 2024",
+                        //   size: "739 KB",
+                        //   href: "June2024/Mark Schemes/Exported/P1-NonCalc-F.pdf",
+                        // },
+                        // Add more past papers as needed
+                      ];
+
+                      var pastPapersHTML = "<h2>No Past Papers</h2>";
+                      // var pastPapersHTML = "<h2>June 2024</h2>";
+
+                      pastPapers.forEach(function (paper) {
+                        pastPapersHTML +=
+                          '<p><a href="' + paper.href + '" target="_blank">';
+                        pastPapersHTML +=
+                          '<img src="img/c-icon__pdf--red.svg" style="width: 25px; height: auto; margin-right: 10px; margin-bottom: 3px; vertical-align: middle;">';
+                        pastPapersHTML +=
+                          paper.name + " (" + paper.size + ")</a></p>";
+                      });
+
+                      pastPaperResultDiv.innerHTML = pastPapersHTML;
+                    } else {
+                      pastPaperResultDiv.innerHTML = ""; // Clear past paper results if subject is not Mathematics
+                    }
+                  }
+                </script>
+                <script>
+                  function showPastPapers() {
+                    var subjectSelect = document.getElementById(
+                      "js-pastPaper-subjects"
+                    );
+                    var selectedSubject =
+                      subjectSelect.options[subjectSelect.selectedIndex].value;
+                    var pastPaperResultDiv = document.getElementById(
+                      "js-pastPaper-searchResult"
+                    );
+
+                    if (selectedSubject === "1310") {
+                      // Mathematics
+                      var pastPapers = [
+                        // {
+                        //   name: "Paper 1 Non-calculator June 2024",
+                        //   size: "507 KB",
+                        //   href: "June2024/Exams/Exported/P1-NonCalc-F.pdf",
+                        // },
+                        // {
+                        //   name: "Insert (Foundation): formulae sheet June 2024",
+                        //   size: "163 KB",
+                        //   href: "June2024/Inserts/Exported/P1-NonCalc-F.pdf",
+                        // },
+                        // {
+                        //   name: "Mark scheme (Foundation): Paper 1 Non-calculator June 2024",
+                        //   size: "739 KB",
+                        //   href: "June2024/Mark Schemes/Exported/P1-NonCalc-F.pdf",
+                        // },
+                        // Add more past papers as needed
+                      ];
+
+                      var pastPapersHTML = "<h2>No Past Papers</h2>";
+                      // var pastPapersHTML = "<h2>June 2024</h2>";
+
+                      pastPapers.forEach(function (paper) {
+                        pastPapersHTML +=
+                          '<p><a href="' + paper.href + '" target="_blank">';
+                        pastPapersHTML +=
+                          '<img src="img/c-icon__pdf--red.svg" style="width: 25px; height: auto; margin-right: 10px; margin-bottom: 3px; vertical-align: middle;">';
+                        pastPapersHTML +=
+                          paper.name + " (" + paper.size + ")</a></p>";
+                      });
+
+                      pastPaperResultDiv.innerHTML = pastPapersHTML;
+                    } else {
+                      pastPaperResultDiv.innerHTML = ""; // Clear past paper results if subject is not Mathematics
+                    }
+                  }
+                </script>
+                <script>
+                  function showPastPapers() {
+                    var subjectSelect = document.getElementById(
+                      "js-pastPaper-subjects"
+                    );
+                    var selectedSubject =
+                      subjectSelect.options[subjectSelect.selectedIndex].value;
+                    var pastPaperResultDiv = document.getElementById(
+                      "js-pastPaper-searchResult"
+                    );
+
+                    if (selectedSubject === "1320") {
                       // Mathematics
                       var pastPapers = [
                         // {
