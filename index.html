@@ -1546,25 +1546,30 @@
     <script type="text/javascript">
       function OptanonWrapper() {}
     </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get all anchor tags with a href ending with "index.html" and replace it with "find-past-papers-and-mark-schemes.html"
-    var anchors = document.querySelectorAll("a[href$='index.html']");
-    anchors.forEach(function (anchor) {
-      anchor.setAttribute(
-        "href",
-        anchor.getAttribute("href").replace("index.html", "find-past-papers-and-mark-schemes")
-      );
-    });
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all anchor tags with a href ending with "index.html" and replace it with "find-past-papers-and-mark-schemes.html"
+        var anchors = document.querySelectorAll("a[href$='index.html']");
+        anchors.forEach(function (anchor) {
+          anchor.setAttribute(
+            "href",
+            anchor
+              .getAttribute("href")
+              .replace("index.html", "find-past-papers-and-mark-schemes")
+          );
+        });
 
-    // Remove ".html" from the current page's URL if it ends with "index.html"
-    var currentPageUrl = window.location.href;
-    if (currentPageUrl.endsWith("index.html")) {
-      var updatedUrl = currentPageUrl.replace("index.html", "find-past-papers-and-mark-schemes");
-      window.history.replaceState({}, document.title, updatedUrl);
-    }
-  });
-</script>
+        // Remove ".html" from the current page's URL if it ends with "index.html"
+        var currentPageUrl = window.location.href;
+        if (currentPageUrl.endsWith("index.html")) {
+          var updatedUrl = currentPageUrl.replace(
+            "index.html",
+            "find-past-papers-and-mark-schemes"
+          );
+          window.history.replaceState({}, document.title, updatedUrl);
+        }
+      });
+    </script>
   </head>
   <body>
     <!--googleoff: snippet-->
@@ -1723,51 +1728,6 @@
                 </script>
                 <hr />
                 <div id="js-pastPaper-searchResult"></div>
-                <h2>Modified past papers</h2>
-                <p>
-                  If you're looking for modified past papers with enlarged font,
-                  you can find them using our modified past paper finder.
-                </p>
-                <p>
-                  <a
-                    href="https://www.aqa.org.uk/find-past-papers-and-mark-schemes/modified-question-papers"
-                    class="c-icon c-icon--right c-icon__right-arrow--blue"
-                    >Search for modified past papers</a
-                  >
-                </p>
-                <h2 style="border: 0px">Teacher access</h2>
-                <p style="border: 0px">
-                  If you are a teacher, you can get early access to the most
-                  recent question papers and mark schemes in Centre Services.
-                </p>
-                <p style="border: 0px">
-                  <a
-                    href="https://onlineservices.aqa.org.uk"
-                    title="Centre services log in"
-                    target="_blank"
-                    style="border: 0px"
-                    >Log in to Centre Services</a
-                  >
-                </p>
-                <h2 style="border: 0px">Availability of past papers</h2>
-                <p>
-                  Most past papers and mark schemes will be available on our
-                  website for a period of three years. This is due to
-                  <a
-                    href="https://www.aqa.org.uk/about-us/who-we-are/our-standards/copyright-intellectual-property-policy"
-                    title="Copyright and intellectual property policy"
-                    >copyright restrictions</a
-                  >
-                  .
-                </p>
-                <p>
-                  <a
-                    href="https://www.aqa.org.uk/exams-administration/exams/whats-available-when"
-                    class="c-icon c-icon--right c-icon__right-arrow--blue"
-                    >Find out when we publish question papers and mark schemes
-                    on our website</a
-                  >
-                </p>
               </div>
             </div>
           </div>
