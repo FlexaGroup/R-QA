@@ -1546,25 +1546,25 @@
     <script type="text/javascript">
       function OptanonWrapper() {}
     </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get all anchor tags with a .html extension and remove it
-        var anchors = document.querySelectorAll("a[href$='.html']");
-        anchors.forEach(function (anchor) {
-          anchor.setAttribute(
-            "href",
-            anchor.getAttribute("href").replace(".html", "")
-          );
-        });
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all anchor tags with a href ending with "index.html" and replace it with "find-past-papers-and-mark-schemes.html"
+    var anchors = document.querySelectorAll("a[href$='index.html']");
+    anchors.forEach(function (anchor) {
+      anchor.setAttribute(
+        "href",
+        anchor.getAttribute("href").replace("index.html", "find-past-papers-and-mark-schemes")
+      );
+    });
 
-        // Remove .html from the current page's URL
-        var currentPageUrl = window.location.href;
-        if (currentPageUrl.endsWith(".html")) {
-          var updatedUrl = currentPageUrl.replace(".html", "");
-          window.history.replaceState({}, document.title, updatedUrl);
-        }
-      });
-    </script>
+    // Remove ".html" from the current page's URL if it ends with "index.html"
+    var currentPageUrl = window.location.href;
+    if (currentPageUrl.endsWith("index.html")) {
+      var updatedUrl = currentPageUrl.replace("index.html", "find-past-papers-and-mark-schemes");
+      window.history.replaceState({}, document.title, updatedUrl);
+    }
+  });
+</script>
   </head>
   <body>
     <!--googleoff: snippet-->
